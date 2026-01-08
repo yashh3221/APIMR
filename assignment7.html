@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<script type="text/JavaScript"> 
+	function Hello(){ 
+	alert("Hello, World"); 
+	} 
+	</script> 
+	<script type="text/javascript">
+	function showBlue() {
+    alert("Blue");
+	}
+	function showBlack() {
+    alert("Black");
+	}
+	function showRed() {
+    alert("Red");
+	}
+	</script>
+	<script type="text/javascript"> 
+	function showAction(action) { 
+	alert("You pressed " + action); 
+	} 
+	</script>
+	
+	</head>
+	<Body>
+	 <!-- Heading section -->
+		<h1 align="center">Creating Table in HTML</h1>
+		<h2 align="center">Savitribai Phule Pune University</h2>
+		<h3 align="center">Course: VSEC-101-CA: HTML and Webpage Designing</h3>
+		<hr color="blue" size="5">
+		
+		
+	<!-- Q1:- Create alert box game using Internal Script-->
+	<h2>1.Creating a button</h2>
+	
+		<input type="button" onclick="Hello();" name="ok" value="Click Me" />
+		
+	<h3>1.My Activity</h3>
+		
+	<!-- Buttons for each color -->
+	<input type="button" value="Blue" onclick="showBlue()">
+	<input type="button" value="Black" onclick="showBlack()">
+	<input type="button" value="Red" onclick="showRed()">
+	<hr color="black" size="1"> 
+	
+	<!-- Q2:- Create alert box game using external script -->
+	<h2>2.Creating a button</h2>
+	<script src="/html/script.js" type="text/JavaScript"/></script> 
+	<input type="button" onclick="Hello();" name="ok" value="Click Me" /> 
+	
+	<h3>2.My Activity</h3>
+
+	<!-- Game console buttons --> 
+	<input type="button" value="Up" onclick="showAction('Up')"> 
+	<input type="button" value="Down" onclick="showAction('Down')"> 
+	<input type="button" value="Left" onclick="showAction('Left')">
+	<input type="button" value="Right" onclick="showAction('Right')">
+	<input type="button" value="Enter" onclick="showAction('Enter')">
+	<hr color="black" size="1">
+	
+	<!-- Q3:-Display “Hello World!” -->
+	<h2>3.Display Hello World</h2>
+
+	<p id="demo"></p> 
+	<script> 
+	document.getElementById("demo").innerHTML = "Hello World!"; 
+	</script>
+	
+	<h3>3.My Activity</h3>
+	<script type="text/javascript"> 
+	document.write("<table border='1' cellpadding='5'>");
+	document.write("<tr><td><b>Name:</b></td><td>YASH NIGHOT</td></tr>"); 
+	document.write("<tr><td><b>Class:</b></td><td>BCA 2025</td></tr>");
+	document.write("<tr><td><b>College Name:</b></td><td>Adhalrao Patil Institute of Management and Research, Landewadi</td></tr>");
+	document.write("<tr><td><b>Name of Best Friend:</b></td><td> Dipak Mane & faran tamboli</td></tr>"); 
+	document.write("<tr><td><b>Favorite Subject:</b></td><td>HTML and Webpage Designing</td></tr>");
+	document.write("</table>");
+	</script>
+	<hr color="black" size="1">
+	
+	<!--Question 4: Change background color using JavaScript-->
+	<h2>4.Change background color using JavaScript</h2>
+	<input type="button" value="PowderBlue" onclick="changeColor()"> 
+	<script> 
+	function changeColor() 
+	{ 
+	document.body.style.backgroundColor = "PowderBlue"; 
+	} 
+	</script>
+	
+	<h3>4.My Activity</h3>
+	<script type="text/javascript"> 
+	function changeColor(color) 
+	{ document.body.style.backgroundColor = color;
+	} </script>
+	<!-- Buttons for each color --> 
+	<input type="button" value="Green" onclick="changeColor('green')">
+	<input type="button" value="Pink" onclick="changeColor('pink')"> 
+	<input type="button" value="Blue" onclick="changeColor('blue')">
+	<hr color="black" size="1">
+	
+	<!--Question 5:  Simple calculator using JavaScript -->
+	<h2>5.Add two numbers and display result.</h2>
+	Enter First Number: <input type="text" id="n1"><br><br> 
+	Enter Second Number: <input type="text" id="n2"><br><br> 
+	<input type="button" value="Add" onclick="add()"> 
+	<p id="result"></p> 
+	<script> 
+	function add() 
+	{ 
+	var a = parseInt(document.getElementById("n1").value); 
+	var b = parseInt(document.getElementById("n2").value); 
+	document.getElementById("result").innerHTML = "result = " + (a + b); 
+	}
+	</script>  
+	
+	<h3>5.My Activity</h3>
+	Enter First Number: <input type="text" id="n3"><br><br>
+  Enter Second Number: <input type="text" id="n4"><br><br>
+
+  <input type="button" value="Add" onclick="add()">
+  <input type="button" value="Subtract" onclick="subtract()">
+  <input type="button" value="Multiply" onclick="multiply()">
+  <input type="button" value="Divide" onclick="divide()">
+
+  <p id="answer"></p>
+
+  <script>
+    function getNumbers() {
+      const a = parseFloat(document.getElementById("n3").value);
+      const b = parseFloat(document.getElementById("n4").value);
+      return { a, b };
+    }
+
+    function add() {
+      const { a, b } = getNumbers();
+      document.getElementById("answer").innerHTML = "answer = " + (a + b);
+    }
+
+    function subtract() {
+      const { a, b } = getNumbers();
+      document.getElementById("answer").innerHTML = "answer = " + (a - b);
+    }
+
+    function multiply() {
+      const { a, b } = getNumbers();
+      document.getElementById("answer").innerHTML = "answer = " + (a * b);
+    }
+
+    function divide() {
+      const { a, b } = getNumbers();
+      if (b === 0) {
+        document.getElementById("answer").innerHTML = "Cannot divide by zero";
+      } else {
+        document.getElementById("answer").innerHTML = "answer = " + (a / b);
+      }
+    }
+  </script>
+
+	<hr color="blue" size="5">
+
+
+	 <footer>
+        <p align="center">
+            Created by: <b>YASH NIGHOT</b><br>
+            Course Code: VSEC-101-CA<br>
+            College: APIMR, Landewadi<br>
+            &copy; 2025 Savitribai Phule Pune University</p>
+	</footer>
+	</Body>
+	</html>
